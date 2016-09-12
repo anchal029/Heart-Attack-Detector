@@ -9,4 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.arqamahmad.heartattack.ListActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        />
+
 </RelativeLayout>
