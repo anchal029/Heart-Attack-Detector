@@ -3,6 +3,8 @@ package com.arqamahmad.heartattack;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +27,7 @@ public class DetectActivity extends AppCompatActivity {
     private EditText mName;
     private ArrayAdapter spinnerAdapter;
     private Button result;
+    private CoordinatorLayout coordinatorLayout;
 
     private int detection = 0; //Variable calculating the Heart Attack percentage
 
@@ -39,10 +42,9 @@ public class DetectActivity extends AppCompatActivity {
         mDiabetic = (Spinner)findViewById(R.id.spinner_diabetic);
         mName = (EditText)findViewById(R.id.name);
         result = (Button)findViewById(R.id.button_result);
+        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.coordinatorLayout);
 
         setupSpinner();//calculating heart attack percentage
-
-
     }
 
 
@@ -161,8 +163,10 @@ public class DetectActivity extends AppCompatActivity {
             // If the row ID is -1, then there was an error with insertion.
             Toast.makeText(this, "Error with saving patient", Toast.LENGTH_SHORT).show();
         } else {
-            // Otherwise, the insertion was successful and we can display a toast with the row ID.
-            Toast.makeText(this, "Patient saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
+            Snackbar snackbar = Snackbar
+                    .make(coordinatorLayout, name + "'s Heart Attack probability % is " + percentage, Snackbar.LENGTH_LONG);
+            snackbar.show();
         }
+
     }
 }

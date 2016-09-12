@@ -20,7 +20,7 @@ public final class Contract {
 
         public final static String COLUMN_NAME ="name";
 
-        public static final String DETECTION_PERCENTAGE = "detection%";
+        public static final String DETECTION_PERCENTAGE = "detection";
 
     }
 
