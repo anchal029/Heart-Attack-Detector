@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_spinner">
+        <item>@string/unknown</item>
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>@string/unknown</item>
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>@string/unknown</item>
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="diabetic">
+        <item>@string/unknown</item>
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+
+</resources>
